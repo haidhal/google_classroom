@@ -39,64 +39,71 @@ class ClassworkScreen extends StatelessWidget {
             ],)
           ],
       ),
-      body:ListView.builder(
-       
-        itemBuilder: (context,index)=>Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(DummyDb.classworklist[index]["module"],
-      style: TextStyle(
-        color: ColorConstants.mainblack,
-        fontSize: 20,
-        fontWeight: FontWeight.w400
-      ),
-      ),
-      SizedBox(height: 10,),
-      Container(
+      body:Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: ListView.builder(
+         
+          itemBuilder: (context,index)=>Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(DummyDb.classworklist[index]["module"],
+        style: TextStyle(
+          color: ColorConstants.mainblack,
+          fontSize: 20,
+          fontWeight: FontWeight.w400
+        ),
+        ),
+        SizedBox(height: 10,),
+        _buildContainer(),
+         SizedBox(height: 15,),
+        InkWell(
+          onTap: () {
+            Navigator.push(context,
+             MaterialPageRoute(builder: (context)=>NewtaskScreen()));
+          },
+          child: Row(children: [
+            CircleAvatar(
+              backgroundColor: ColorConstants.darkgrey ,
+              child: Icon(Icons.assignment,
+              color: ColorConstants.mainwhite,
+              size: 20,),
+            ),
+             SizedBox(width: 20,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              Text("SQL slides",
+              style: TextStyle(color: ColorConstants.mainblack,
+              fontSize: 15,
+              fontWeight: FontWeight.w500
+              ),),
+            //   SizedBox(height: 15,),
+              Text("posted on Nov 12",
+              style: TextStyle(
+                color: ColorConstants.mainblack,
+                fontSize: 12,
+                fontWeight: FontWeight.normal
+              ),)
+            ],)
+          ],),
+        ),
+        SizedBox(height: 18,)
+            ],
+          ),
+          
+           itemCount: DummyDb.classworklist.length),
+      ) ,
+    );
+  }
+
+  Container _buildContainer() {
+    return Container(
         height: 1,
       
         width: double.infinity,
         decoration: BoxDecoration(
           color: ColorConstants.darkgrey
         ),
-      ),
-       SizedBox(height: 15,),
-      InkWell(
-        onTap: () {
-          Navigator.push(context,
-           MaterialPageRoute(builder: (context)=>NewtaskScreen()));
-        },
-        child: Row(children: [
-          CircleAvatar(
-            backgroundColor: ColorConstants.darkgrey ,
-            child: Icon(Icons.assignment,
-            color: ColorConstants.mainwhite,
-            size: 20,),
-          ),
-           SizedBox(width: 20,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-            Text("SQL slides",
-            style: TextStyle(color: ColorConstants.mainblack,
-            fontSize: 15,
-            fontWeight: FontWeight.w500
-            ),),
-          //   SizedBox(height: 15,),
-            Text("posted on Nov 12",
-            style: TextStyle(
-              color: ColorConstants.mainblack,
-              fontSize: 12,
-              fontWeight: FontWeight.normal
-            ),)
-          ],)
-        ],),
-      ),
-      SizedBox(height: 18,)
-          ],
-        ),
-        
-         itemCount: 20) ,
-    );
+      );
   }
 }

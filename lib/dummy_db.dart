@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 class DummyDb {
   static List dataList = [
     {
-     "image" : " https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+     "image" : "https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 ",
      "title" : "Flutter May 24 ",
      "subtitle" : "sem VI",
-     "host" : "Neethu Unni"
+     "host" : "Neethu Unni",
+     
     },
 
    {
@@ -22,7 +23,7 @@ class DummyDb {
      "host" : "Ayesha Khan"
    },
    {
-     "image" : " https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+     "image" : "https://images.pexels.com/photos/1181248/pexels-photo-1181248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
      "title" : "Web Development Trends August 30",
      "subtitle" : "sem VII",
      "host" : "Ravi Sharma"
@@ -40,7 +41,7 @@ class DummyDb {
      "host" : "Vikram Singh"
    },
    {
-     "image" : " https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+     "image" : "https://images.pexels.com/photos/4006151/pexels-photo-4006151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
      "title" : "Cloud Computing Overview July 5",
      "subtitle" : "sem VIII",
      "host" : "Neha Sharma"
@@ -52,7 +53,7 @@ class DummyDb {
      "host" : "Suresh Kumar"
    },
    {
-     "image" : " https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+     "image" : " https://images.pexels.com/photos/2182863/pexels-photo-2182863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
      "title" : "Software Engineering Practices August 1",
      "subtitle" : "sem VII",
      "host" : "Kiran Raj"
@@ -76,13 +77,13 @@ class DummyDb {
       "host" : "Meera Joseph"
     },
     {
-      "image" : " https://images.pexels.com/photos/4835419/pexels-photo-4835419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "image" : "https://i.pinimg.com/736x/8a/69/1f/8a691f82c76ab844029e8dfb68fcd202.jpg",
       "title" : "Ethical Hacking Essentials June 15",
       "subtitle" : "sem VI",
       "host" : "Vivek Desai"
     },
     {
-      "image" : " https://images.pexels.com/photos/19166565/pexels-photo-19166565/free-photo-of-modern-building-in-austria.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "image" : "https://i.pinimg.com/564x/1f/78/26/1f78269ad8d7892115e2801a4bf512f2.jpg",
       "title" : "Database Management July 10",
       "subtitle" : "sem IV",
       "host" : "Anita Rao"
@@ -112,7 +113,8 @@ class DummyDb {
       "titleclr" :Colors.grey,
       "color" : Colors.grey,
       "chpName" : "dart",
-      "dueDate" : "nov 12"
+      "dueDate" : "nov 12",
+      "streamtitle" : "new assignment"
     },
       {
     "appbartitle": "Home",
@@ -120,7 +122,8 @@ class DummyDb {
     "titleclr": Colors.blue,
     "color": Colors.lightBlue,
     "chpName": "flutter",
-    "dueDate": "dec 25"
+    "dueDate": "dec 25",
+     "streamtitle" : "new material"
   },
   {
     "appbartitle": "Settings",
@@ -128,7 +131,8 @@ class DummyDb {
     "titleclr": Colors.green,
     "color": Colors.lightGreen,
     "chpName": "android",
-    "dueDate": "jan 15"
+    "dueDate": "jan 15",
+     "streamtitle" : "new assignment",
   },
   {
     "appbartitle": "Profile",
@@ -136,7 +140,8 @@ class DummyDb {
     "titleclr": Colors.red,
     "color": Colors.deepOrange,
     "chpName": "ios",
-    "dueDate": "feb 20"
+    "dueDate": "feb 20",
+     "streamtitle" : "new assignment"
   },
   {
     "appbartitle": "Notifications",
@@ -144,7 +149,8 @@ class DummyDb {
     "titleclr": Colors.amber,
     "color": Colors.amber,
     "chpName": "firebase",
-    "dueDate": "mar 10"
+    "dueDate": "mar 10",
+     "streamtitle" : "seminar submission"
   },
   {
     "appbartitle": "Help",
@@ -152,7 +158,8 @@ class DummyDb {
     "titleclr": Colors.deepPurple,
     "color": Colors.deepPurple,
     "chpName": "api",
-    "dueDate": "apr 5"
+    "dueDate": "apr 5",
+     "streamtitle" : "new material"
   },
   {
     "appbartitle": "About",
@@ -160,7 +167,8 @@ class DummyDb {
     "titleclr": Colors.deepOrange,
     "color": Colors.deepOrange,
     "chpName": "design",
-    "dueDate": "may 30"
+    "dueDate": "may 30",
+     "streamtitle" : "new assignment"
   },
   {
     "appbartitle": "Feedback",
@@ -168,7 +176,8 @@ class DummyDb {
     "titleclr": Colors.teal,
     "color": Colors.teal,
     "chpName": "testing",
-    "dueDate": "jun 22"
+    "dueDate": "jun 22",
+     "streamtitle" : "new task"
   },
   {
     "appbartitle": "Support",
@@ -176,7 +185,8 @@ class DummyDb {
     "titleclr": Colors.blueGrey,
     "color": Colors.blueGrey,
     "chpName": "database",
-    "dueDate": "jul 18"
+    "dueDate": "jul 18",
+     "streamtitle" : "new material"
   },
   {
     "appbartitle": "Log Out",
@@ -184,7 +194,8 @@ class DummyDb {
     "titleclr": Colors.orangeAccent,
     "color": Colors.orangeAccent,
     "chpName": "security",
-    "dueDate": "aug 14"
+    "dueDate": "aug 14",
+     "streamtitle" : "new task"
   },
   {
     "appbartitle": "Dashboard",
@@ -192,7 +203,8 @@ class DummyDb {
     "titleclr": Colors.lightBlueAccent,
     "color": Colors.lightBlueAccent,
     "chpName": "analytics",
-    "dueDate": "sep 25"
+    "dueDate": "sep 25",
+     "streamtitle" : "new assignment"
   }
   ];
 
@@ -242,4 +254,5 @@ class DummyDb {
     },
 
   ];
+  
 }

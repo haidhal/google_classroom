@@ -10,9 +10,9 @@ import 'package:google_classroom/view/stream/stream.dart';
 class BottomNavbarScreen extends StatefulWidget {
   const BottomNavbarScreen({
     super.key,
-    // required this.imageurl
+     required this.imageurl
   });
-  // final String imageurl;
+   final String imageurl;
   @override
   State<BottomNavbarScreen> createState() => _BottomNavbarScreenState();
 }

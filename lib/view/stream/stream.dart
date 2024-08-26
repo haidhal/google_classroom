@@ -10,15 +10,17 @@ import 'package:google_classroom/view/newtask_screen/newtask_screen.dart';
 class Stream extends StatelessWidget {
   const Stream({
     super.key,
-    //  this.imageurl
+     this.imageurl
   });
-// final String? imageurl;
+ final String? imageurl;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.white.withOpacity(.9),
-      appBar: AppBar(
+      backgroundColor: 
+      Colors.white.withOpacity(.9),
+      appBar:
+       AppBar(
         elevation: 10,
         shadowColor: Colors.black,
         leading: Icon(Icons.menu),
@@ -42,6 +44,20 @@ class Stream extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+        //       ListView(
+        //         children: 
+        //         [ Container(
+        // height: 150,
+        // decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+        // width: double.infinity,
+        // child: Image.network(
+        //   DummyDb.dataList[index]["image"],
+        //   //"https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 ",
+        //   // imageurl!,
+        //   fit: BoxFit.cover,
+        // )
+        // )]
+        //       ),
               //#1
               buildImageSection(),
               //#2
@@ -63,7 +79,7 @@ class Stream extends StatelessWidget {
               //#3
               ListView.separated(
                 shrinkWrap: true,
-                itemCount: 10,
+                itemCount: 5,
                 separatorBuilder: (context, index) => SizedBox(
                   height: 12,
                 ),
@@ -104,16 +120,16 @@ class Stream extends StatelessWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "New assignment : Authentication",
+                                Text("new assignment : authentication task",
+                               //   DummyDb.classworklist[index]["streamtitle"],
                                   style: TextStyle(
                                       color: ColorConstants.mainblack),
                                 ),
                                 Text("Task",
                                     style: TextStyle(
                                         color: ColorConstants.mainblack)),
-                                Text(
-                                  "posted 16 jul",
+                                Text("posted on nov 24",
+                                 // DummyDb.classworklist[index]["duedate"],
                                   style: TextStyle(
                                       color:
                                           ColorConstants.grey.withOpacity(.90)),
@@ -132,7 +148,7 @@ class Stream extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.push(  
                             context,
                             MaterialPageRoute(
                                 builder: (context) => ClassComment()));
@@ -159,7 +175,7 @@ class Stream extends StatelessWidget {
               )
             ],
           ),
-        ),
+        ),         
       ),
     );
   }
@@ -196,7 +212,7 @@ class Stream extends StatelessWidget {
         width: double.infinity,
         child: Image.network(
           //DummyDb.dataList[index]["image"],
-          "https://images.pexels.com/photos/11035393/pexels-photo-11035393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          "https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 ",
           // imageurl!,
           fit: BoxFit.cover,
         ));

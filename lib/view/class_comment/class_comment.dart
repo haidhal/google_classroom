@@ -27,20 +27,45 @@ class ClassComment extends StatelessWidget {
        Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          TextButton(
-            onPressed: (){},
-             child: Container(
+         InkWell(
+          onTap: (){},
+           child: Container(
+            padding: EdgeInsets.all(12),
+               
+                height: 100,width: double.infinity,
+                decoration: BoxDecoration(
+                 // border: Border.all(color: ColorConstants.darkgrey,width: 2)
+                ),
+                 child:
+                 Column(
+                  children: [
+                      Container(
+        height: 1,
+      
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: ColorConstants.darkgrey
+        ),
+      ),
+                           Row(
+                             children:[ 
+                              Text("Add class comment",
+                                              style: TextStyle(
+                                               color: ColorConstants.grey,
+                                               fontSize: 15
+                                              ),),
+                                              Spacer(),
+                                              Icon(Icons.send,
+                                              color: ColorConstants.grey,)
+                                              ]
+                           ),
+                  ],
+                 )
+
+                 
+               ),
+         )
              
-              height: 30,width: double.infinity,
-              decoration: BoxDecoration(
-                border: Border.all(color: ColorConstants.darkgrey,width: 2)
-              ),
-               child: Text("Add class comment",
-               style: TextStyle(
-                color: ColorConstants.grey,
-                fontSize: 15
-               ),),
-             )),
         ],
       ),
     );

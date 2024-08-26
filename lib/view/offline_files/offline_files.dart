@@ -3,51 +3,37 @@
 import 'package:flutter/material.dart';
 import 'package:google_classroom/dummy_db.dart';
 import 'package:google_classroom/utils/color_constants.dart';
-import 'package:google_classroom/view/bottom_navbar_screen/bottom_navbar_screen.dart';
 import 'package:google_classroom/view/classroomfile_screen/classroomfile_screen.dart';
-import 'package:google_classroom/view/classwork_screen/classwork_screen.dart';
 import 'package:google_classroom/view/notification_screen/notification_screen.dart';
-import 'package:google_classroom/view/offline_files/offline_files.dart';
-import 'package:google_classroom/view/screen_two/screen_two.dart';
+import 'package:google_classroom/view/screen_one/screen_one.dart';
 import 'package:google_classroom/view/settings_screen/settings_screen.dart';
 import 'package:google_classroom/view/stream/stream.dart';
 
-class ScreenOne extends StatelessWidget {
-  const ScreenOne({super.key,this.selectedindex
-  });
-final int? selectedindex;
+class OfflineFiles extends StatelessWidget {
+  const OfflineFiles({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(  
-      extendBody: true,  
-      appBar: AppBar(
-       elevation: 10,
-       shadowColor: Colors.black,
-        backgroundColor: ColorConstants.mainwhite,
-        // leading:IconButton(
-        //   onPressed: (){
-        //     Scaffold.of(context).openDrawer();
-        //   }, 
-        //   icon:  Icon(Icons.menu),),
-        
-
-        
-        title: Row(children: [
-          Text("Google",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.grey.shade700),),
-          SizedBox(width: 5,),
-           Text("Classroom",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Colors.grey.shade600,),),
-        ],),
-        actions: [
-          CircleAvatar(radius: 20,backgroundColor: Colors.orange,
-            child: Text("H",style: TextStyle(color: ColorConstants.mainwhite),),),
-            SizedBox(width: 20,),
-          Icon(Icons.more_vert,color: Colors.grey.shade700,),
-          SizedBox(width: 15,)
-        ],
-      ),
-      //
-      drawer: Drawer(
+    return SafeArea(
+      child: Scaffold(
+        extendBody: true,
+        backgroundColor: ColorConstants.mainblack,
+        appBar: AppBar(
+          backgroundColor: ColorConstants.mainblack,
+          // leading: Icon(Icons.menu,
+          // color: ColorConstants.mainwhite,),
+          title: Text("Offline files",
+          style: TextStyle(
+            color: ColorConstants.mainwhite,
+            fontSize: 20,
+            fontWeight: FontWeight.w600
+          ),),
+          actions: [
+            Icon(Icons.more_vert,
+            color: ColorConstants.mainwhite,)
+          ],
+        ),
+         drawer: Drawer(
         backgroundColor: ColorConstants.mainblack,
         child:ListView(
          
@@ -66,17 +52,7 @@ final int? selectedindex;
                       color: ColorConstants.mainwhite,
                       fontWeight: FontWeight.bold
                     ),),
-                    // SizedBox(height: 15,),
-                    // Container(
-                    //       height: 1,
-                        
-                    //       width: double.infinity,
-                    //       decoration: BoxDecoration(
-                    //         color: ColorConstants.darkgrey
-                    //       ),
-                    //     ),
-                    //      SizedBox(height: 15,),
-                              
+                    
                               
                   ],
                               ),
@@ -251,111 +227,74 @@ final int? selectedindex;
           ] ,
         ) ,
       ),    
-      //
-      //  drawer: Drawer(
-      //   child: ListView(  
-      //     padding: EdgeInsets.zero,
-      //     children: <Widget>[
-      //       DrawerHeader(
-      //         decoration: BoxDecoration(
-      //           color: Colors.blue,
-      //         ),
-      //          child: Text(
-      //           'Drawer Header',
-      //           style: TextStyle(
-      //             color: Colors.white,
-      //             fontSize: 24,
-      //           ),
-      //         ),
-      //       ),
-      //        ListTile(
-      //         leading: Icon(Icons.home),
-      //         title: Text('Home'),
-      //         onTap: () {
-      //           // Update the UI or navigate to another page
-      //           Navigator.pop(context);
-      //         },
-      //       ),
-          
-      //        ],
-      //   ),
-      // ),
-
-
-//
-      // drawer: Drawer(
-      //   child:ListView(
-      //     children: [
-      //       DrawerHeader(child: Text("data"),
-      //       decoration: BoxDecoration(color: Colors.blue),
-      //       ),
-      //       ListTile(
-      //         title: Text("item 1"),
-      //         onTap: () {
-      //           Navigator.pop(context);
-      //         },
-      //       ),
-      //        ListTile(
-      //         title: Text("item 2"),
-      //         onTap: () {
-      //           Navigator.pop(context);
-      //         },
-      //       )
-      //     ],
-      //   )
-        
-      // ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Expanded(
-          child: ListView.separated(
-            
-            separatorBuilder: (context,index)=> SizedBox(height: 10,),
-          
-            itemBuilder: (context,index)=>
-            InkWell(
-              onTap: () {
-                Navigator.push(context, 
-                MaterialPageRoute(builder: (conext)=>BottomNavbarScreen(
-                  imageurl:
-                   DummyDb.dataList[index]["image"],
-                )
-                
-                ));
-              },
-              child: Container(
-                padding: EdgeInsets.all(10),
-                height: 120,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(children: [
+              Container(
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage(DummyDb.dataList[index]["image"]),
-                  fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(6)
+                  border: Border.all(color: ColorConstants.grey,
+                  width: 2),
+                  borderRadius: BorderRadius.circular(2)
                 ),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                    Column(crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10,),
-                      Text(DummyDb.dataList[index]["title"],
-                      style: TextStyle(color: ColorConstants.mainwhite,fontSize: 22),),
-                      Text(DummyDb.dataList[index]["subtitle"],style: TextStyle(color: ColorConstants.mainwhite,fontSize: 16),)
-                    ],),
-                  //  Spacer(),
-                    Icon(Icons.more_vert,color: ColorConstants.mainwhite,)
-                  ],),
-                  Spacer(),
-                  Text(DummyDb.dataList[index]["host"],style: TextStyle(color: ColorConstants.mainwhite,fontSize: 12),)
-                ],),
+                      Text("All Classes",
+                      style: TextStyle(
+                        color: ColorConstants.mainwhite,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500
+                      ),),
+                      PopupMenuButton(
+                        color: ColorConstants.mainblack,
+                        icon: Icon(Icons.arrow_drop_down,
+                        color: ColorConstants.mainwhite,),
+                        itemBuilder: (context)=>[
+                          PopupMenuItem(child: Text("All Classes",
+                      style: TextStyle(
+                        color: ColorConstants.mainwhite,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500
+                      ),),
+                      onTap: (){},
+                       )
+                        ])
+                    ],
+                  ),
+                ),
               ),
-            ),
-            itemCount: DummyDb.dataList.length,
-            ),
+              SizedBox(height: 22,),
+              SizedBox(
+                child: ListView.separated(
+                  itemCount: 10,
+                     separatorBuilder: (context,index)=>SizedBox(height: 20,),
+                  shrinkWrap: true,
+                  itemBuilder: (context,index)=>Row(
+                    children: [
+                      Icon(Icons.picture_as_pdf,
+                      color: Color.fromARGB(255, 251, 97, 86),),
+                      SizedBox(width: 20,),
+                      Text("programming in c1",
+                      style: TextStyle(
+                        color: ColorConstants.mainwhite,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500
+                      ),),
+                      Spacer(),
+                      Icon(Icons.cancel_presentation_outlined,
+                      color: ColorConstants.mainwhite,)
+                          
+                    ],
+                  )
+                  ),
+              )
+            ],),
+          ),
         ),
       ),
-  
-    
     );
   }
-}     
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_classroom/dummy_db.dart';
 
 class ScreenTwo extends StatefulWidget {
   const ScreenTwo({super.key});
@@ -10,7 +11,8 @@ class ScreenTwo extends StatefulWidget {
 class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+     
     
   
     );
